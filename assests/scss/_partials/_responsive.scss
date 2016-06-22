@@ -1,0 +1,22 @@
+
+@include MS('M'){
+	.row{
+		padding: 0px 40px;
+	}
+	.nt-container{
+		.nt-title{
+			display: none;
+		}
+		.nt-title2{
+			display: block;
+		}
+		.nt-news{
+			font-size: 14px;
+		}
+	}
+	.social-icons{
+		text-align: left;
+	}
+
+}
+

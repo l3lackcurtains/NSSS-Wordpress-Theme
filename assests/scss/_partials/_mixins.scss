@@ -1,0 +1,46 @@
+//Responsive Layouts
+// breakpoints
+   
+$S:     480px;   
+$M:     768px;
+$B:     992px;        
+$L:     1200px;
+$maxM:    $M - 1px;
+
+// media queries
+
+@mixin MS($canvas) {
+  @if $canvas == S {
+   @media only screen and (max-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (max-width: $M) { @content; } 
+  }
+    @else if $canvas == B {
+   @media only screen and (max-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (max-width: $L) { @content; } 
+  }
+  @else if $canvas == maxM {
+   @media only screen and (max-width: $maxL) { @content; } 
+  }
+  @else if $canvas == mM {
+   @media only screen and (max-width: $mM) { @content; } 
+  }
+}
+
+@include keyframes(fade) {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.3;
+  }
+  66% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
